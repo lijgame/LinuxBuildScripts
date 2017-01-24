@@ -1,8 +1,8 @@
-#!/bin/sh
-sudo apt-get install -y screen libopencv-dev libgflags-dev libgoogle-glog-dev liblmdb-dev python-dev python-
-numpy python-scipy python-pip libboost-all-dev libatlas-base-dev build-essential pkg-config libprotobuf-dev libleveldb-
-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
-
+#!/bin/sh 
+sudo apt install build-essential pkg-config libopencv-dev libgflags-dev libgoogle-glog-dev liblmdb-dev -y
+sudo apt install python-dev python-pip python-setuptools python-numpy python-scipy -y
+sudo apt install libboost-all-dev libatlas-base-dev libprotobuf-dev -y
+sudo apt install libleveldb- dev libsnappy-dev libhdf5-serial-dev protobuf-compiler -y
 sudo pip install Cython
 sudo pip install numpy
 sudo pip install scipy
