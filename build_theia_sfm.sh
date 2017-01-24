@@ -1,4 +1,6 @@
 #!/bin/sh
+mkdir -p ~/codes
+num_cpus=$(nproc --all)
 
 sudo apt install cmake git build-essential -y
 sudo apt install libeigen3-dev libgoogle-glog-dev libatlas-base-dev libsuitesparse-dev -y
@@ -15,7 +17,7 @@ cd ..
 mkdir oiio-build
 cd oiio-build/
 cmake ~/codes/oiio
-make -j5
+make -j$num_cpus
 sudo make install
 
 # build and install ceres solver
@@ -24,7 +26,7 @@ git clone https://ceres-solver.googlesource.com/ceres-solver
 mkdir ceres-solver-build
 cd ceres-solver-build/
 cmake ~/codes/ceres-solver
-make -j5
+make -j$num_cpus
 make test
 sudo make install
 
@@ -36,4 +38,4 @@ git checkout testing
 mkdir TheiaSfM-build
 cd TheiaSfM-build/
 cmake ~/codes/TheiaSfM
-make -j5
+make -j$num_cpus
