@@ -35,6 +35,7 @@ cd ~/codes
 git clone https://github.com/lijgame/TheiaSfM.git
 cd TheiaSfM
 git checkout testing
+cd ..
 mkdir TheiaSfM-build
 cd TheiaSfM-build/
 cmake ~/codes/TheiaSfM
