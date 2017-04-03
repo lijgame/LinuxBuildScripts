@@ -11,6 +11,7 @@ sudo apt-get -y install \
     libglew-dev \
     freeglut3-dev \
     qt5-default \
+    libqt5opengl5-dev\
     libxmu-dev \
     libxi-dev
 
