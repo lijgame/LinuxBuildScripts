@@ -1,6 +1,6 @@
 #!/bin/bash
 num_cpus=$(nproc --all)
-
+sudo apt install -y libcgal-dev libcgal-qt5-dev
 git clone --recursive https://github.com/lijgame/openMVS.git ~/codes/openMVS
 cd ~/codes/openMVS
 git remote add remote https://github.com/cdcseacave/openMVS.git
