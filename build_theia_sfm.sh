@@ -22,21 +22,28 @@ sudo apt install libxmu-dev libxi-dev libtiff-dev libpng-dev libopenexr-dev libb
 
 # build and install ceres solver
 cd ~/codes
-git clone https://ceres-solver.googlesource.com/ceres-solver
+if [ -d " ~/codes/ceres-solver" ]; then
+	git clone https://ceres-solver.googlesource.com/ceres-solver
+fi
+
 mkdir -p ~/codes/build/ceres-solver_build
 cd ~/codes/build/ceres-solver_build
+rm -rf ./*
 cmake -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF ~/codes/ceres-solver
 make -j$num_cpus
 sudo make install
 
 # build and install theia sfm
 cd ~/codes
-git clone https://github.com/lijgame/TheiaSfM.git
+if [ -d " ~/codes/TheiaSfM" ]; then
+	git clone https://github.com/lijgame/TheiaSfM.git
+fi
 cd TheiaSfM
 git remote add remote https://github.com/sweeneychris/TheiaSfM.git
 git checkout dev
 cd ..
-mkdir TheiaSfM_build
+mkdir -p TheiaSfM_build
 cd TheiaSfM_build/
+rm -rf ./*
 cmake -DBUILD_TESTING=OFF -DOPENMP=ON ~/codes/TheiaSfM 
 make -j$num_cpus
