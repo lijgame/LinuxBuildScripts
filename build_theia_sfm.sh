@@ -3,9 +3,9 @@ mkdir -p ~/codes
 num_cpus=$(nproc --all)
 
 sudo apt install cmake git build-essential -y
-sudo apt install libgoogle-glog-dev libatlas-base-dev libsuitesparse-dev -y
+sudo apt install libgoogle-glog-dev libgtest-dev libatlas-base-dev libsuitesparse-dev -y
 sudo apt install mesa-common-dev mesa-utils-extra libgl1-mesa-dev libglapi-mesa freeglut3-dev -y
-sudo apt install libxmu-dev libxi-dev libtiff-dev libpng-dev libopenexr-dev libboost-all-dev libopenimageio-dev -y
+sudo apt install libxmu-dev libxi-dev libtiff-dev libpng-dev libopenexr-dev libboost-all-dev libopenimageio-dev libhdf5-dev -y
 
 # build and install openimageio from source The one come with Ubuntu 14.04 is
 # too old
@@ -41,9 +41,9 @@ fi
 cd TheiaSfM
 git remote add remote https://github.com/sweeneychris/TheiaSfM.git
 git checkout dev
-cd ..
-mkdir -p TheiaSfM_build
-cd TheiaSfM_build/
+
+mkdir -p build
+cd build/
 rm -rf ./*
 cmake -DBUILD_TESTING=OFF -DOPENMP=ON ~/codes/TheiaSfM 
 make -j$num_cpus
