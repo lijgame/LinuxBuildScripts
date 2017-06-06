@@ -1,0 +1,1 @@
+ls -1 *.png | parallel -j 8 --eta  convert '{}' -quality 100 '{.}.JPG'
