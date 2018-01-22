@@ -13,7 +13,8 @@ sudo apt-get -y install \
     qt5-default \
     libqt5opengl5-dev\
     libxmu-dev \
-    libxi-dev
+    libxi-dev \
+    libeigen3-dev
 
 git clone https://github.com/lijgame/colmap.git ~/codes/colmap
 cd ~/codes/colmap
