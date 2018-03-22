@@ -1,0 +1,12 @@
+sudo docker run --detach \
+    --hostname LYHOME-SERVER \
+    --publish 10443:443 \
+    --publish 1080:80 \
+    --publish 1022:22 \
+    --env GITLAB_OMNIBUS_CONFIG="external_url 'http://git.gobeta.info/'; gitlab_rails['lfs_enabled'] = true;"\
+    --name gitlab \
+    --restart always \
+    --volume ~/docker/gitlab/config:/etc/gitlab \
+    --volume ~/docker/gitlab/logs:/var/log/gitlab \
+    --volume ~/docker/gitlab/data:/var/opt/gitlab \
+    gitlab/gitlab-ce:latest
