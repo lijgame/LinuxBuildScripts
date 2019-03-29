@@ -8,3 +8,4 @@
 # / was on /dev/sda1 during installation
 192.168.0.102:/volume1/homes /home/lijiang/nas_homes nfs auto,rw,nofail,noatime,nolock,user,intr,tcp,actimeo=1800 0 0
 192.168.0.102:/volume1/JackSharedFolder /home/lijiang/nas_shared nfs auto,rw,nofail,noatime,nolock,user,intr,tcp,actimeo=1800 0 0
+192.168.0.101:/volume1/LYDrive /mnt/LYDrive nfs defaults,user,exec 0 0
