@@ -1,0 +1,4 @@
+create a YourApp.desktop in ~/Desktop folder like CloudCompare.desktop.
+To allow OS search it, copy this file to ~/.local/share/applications  as well.
+
+System wise desktop files are in /usr/share/applications
